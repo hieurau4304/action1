@@ -8,4 +8,5 @@ jobs:
     steps:
       - run: whoami
       - run: pwd
-      - run: echo Hello World
+      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+      - run: echo Hello World, today is $TODAY
